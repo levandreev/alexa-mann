@@ -1,0 +1,22 @@
+{
+  "intents": [
+    {
+      "intent": "DinnerIntent"
+    },
+    {
+      "intent": "RomanticIntent"
+    },
+    {
+      "intent": "VegetarianIntent"
+    },
+    {
+      "intent": "WineIntent"
+    },
+    {
+      "intent": "ConfirmwineIntent"
+    },
+    {
+      "intent": "CompletedIntent"
+    }
+  ]
+}
