@@ -11,14 +11,53 @@ ask = Ask(app, "/")
 
 @ask.launch
 def invoke():
-    # welcome_msg = render_template('welcome')
+    msg = render_template('welcome')
 
-    return question('What kind of dinner do you want?')
+    return question(msg)
 
+
+@ask.intent('DinnerIntent')
+def dtone():
+
+    msg = render_template('dinnertype1')
+
+    return question(msg)
 
 @ask.intent('RomanticIntent')
-def romantic():
-    return question('Do you want to have a vegetarian dinner?')
+def dttwo():
+
+    msg = render_template('dinnertype2')
+
+    return question(msg)
+
+@ask.intent('VegetarianIntent')
+def dtthree():
+
+    msg = render_template('dinnerproposal1')
+
+    return question(msg)
+
+@ask.intent('WineIntent')
+def dtwine():
+
+    msg = render_template('wineproposal1')
+
+    return question(msg)
+
+@ask.intent('ConfirmwineIntent')
+def dtconf():
+
+    msg = render_template('anythingelse')
+
+    return question(msg)
+
+@ask.intent('CompletedIntent')
+def dtone():
+
+    msg = render_template('prepared')
+
+    return question(msg)
+
 
 
 @ask.intent("AMAZON.StopIntent")
